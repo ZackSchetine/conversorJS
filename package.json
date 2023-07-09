@@ -8,9 +8,9 @@
   "version": "1.0.0",
   "main": "conversorDeMedidas.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node conversor.js" 
   },
   "keywords": [],
-  "author": "",
+  "author": "Eduardo Saat e Zack", 
   "license": "ISC"
 }
