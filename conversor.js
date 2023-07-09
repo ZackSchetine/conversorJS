@@ -1,5 +1,6 @@
 /*  Utilize Node no terminal para iniciar aplicação. É um requisito ter node e express instalado */
 let teclado = require('prompt-sync')();
+// módulo ('prompt-sync') para receber entradas e ler pelo terminal
 
 let opcao = 0;
 let opcaoInterna = 0;
