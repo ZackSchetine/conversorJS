@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "mimoappprojetos",
+  "description": "O projeto \"mimoAppProjetos\" reúne uma variedade de códigos obtidos a partir do aplicativo Mimo, que são destinados a serem aprimorados. Através do aplicativo e seus códigos de desenvolvimento web, os usuários têm a oportunidade de desenvolver habilidades como abstração, pensamento computacional e conhecimento de linguagem de programação(javascript). Para saber mais sobre o aplicativo, acesse: https://mimo.org/web \r <br>\r Exemplo prático de um exercício. <br>\r // miles to kilometer <br>\r var miles = 24; <br>\r var kilometers = 40; <br>\r const number = 1.609344; <br>\r const kilometersToMiles = kilometers / number; <br>\r const milesToKilometers = miles * number; <br>\r console.log(\"Exercise\"); <br>\r console.log(\"Example 1 \" + \"Distance conversions\"); <br>\r console.log(kilometers + \" kilometers are: \" + kilometersToMiles + \" miles\"); <br>\r console.log(\"and\"); <br>\r console.log(miles + \" miles are: \" + milesToKilometers + \" kilometers\" ); <br>",
+  "version": "1.0.0",
+  "main": "conversorDeMedidas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
