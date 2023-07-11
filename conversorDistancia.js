@@ -2,6 +2,7 @@ let teclado = require('prompt-sync')();
 
 const bordas = require('./bordas');
 const validarNumero = require('./validarNumero');
+const numeroNegativo = require('./numeroNegativo');
 
 let opcaoInterna = 0;
 let valor = 0;
@@ -31,10 +32,11 @@ function convDistancia() {
                 console.log("|Informe o valor a ser convertido:      |");
                 bordas(1);
                 valor = Number(teclado());
-                if (validarNumero(valor)) {
-                    const kilometersToMiles = (valor / number).toFixed(2);
+                if (numeroNegativo(validarNumero(valor))) {
+                    const kilometersToMiles = ((valor / number).toFixed(2));
                     bordas(0);
-                    console.log(`|${valor}km é igual a ${kilometersToMiles}mi`.padEnd(40, " ") + `|`);
+                    console.log(`|O valor a ser convertido é: `.padEnd(40, " ") + `|`);
+                    console.log(`|${valor}km que é igual a ${kilometersToMiles}mi`.padEnd(40, " ") + `|`);
                     bordas(1);
                 }
                 break;
@@ -45,7 +47,7 @@ function convDistancia() {
                 console.log("|Informe o valor a ser convertido:      |");
                 bordas(1);
                 valor = Number(teclado());
-                if (validarNumero(valor)) {
+                if (numeroNegativo(validarNumero(valor))) {
                     const milesToKilometers = (valor * number).toFixed(2);
                     bordas(0);
                     console.log(`${valor}mi é igual a ${milesToKilometers}km`.padEnd(40, " ") + `|`);
