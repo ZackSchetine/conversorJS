@@ -1,10 +1,12 @@
 /*  Utilize Node no terminal para iniciar aplicação. É um requisito ter node e express instalado */
-let teclado = require('prompt-sync')();
 // módulo ('prompt-sync') para receber entradas e ler pelo terminal
+import prompt from 'prompt-sync';
+const teclado = prompt();
 
-const bordas = require('./bordas');
-const convDistancia = require('./conversorDistancia');
-const convTemperatura = require('./conversorTemperatura');
+
+import bordas from './bordas.js';
+import convDistancia from './conversorDistancia.js';
+import convTemperatura from './conversorTemperatura.js';
 let opcao = 0;
 
 //Display do menu principal
