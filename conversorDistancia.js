@@ -16,6 +16,7 @@ function menuConvDistDisplay() {
     console.log("|1 - Quilômetro(km) para milha(mi)      |");
     console.log("|2 - Milha(mi) para quilômetro(km)      |");
     console.log("|3 - Voltar a tela inicial              |");
+    console.log("|4 - Fechar o programa                  |")
     bordas(1);
 }
 
@@ -60,6 +61,12 @@ function convDistancia() {
                 console.log("|        Voltando a tela inicial        |");
                 bordas(1);
                 break;
+
+            case 4:
+                bordas(0);
+                console.log("|          Saindo do programa           |");
+                bordas(1);
+                process.exit();
 
             default:
                 bordas(0);
