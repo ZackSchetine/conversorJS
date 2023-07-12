@@ -48,7 +48,7 @@ function convDistancia() {
                 console.log("|Informe o valor a ser convertido:      |");
                 bordas(1);
                 valor = Number(teclado());
-                if (numer(validarNumero(valor))) {
+                if (numeroNegativo(validarNumero(valor))) {
                     const milesToKilometers = (valor * number).toFixed(2);
                     bordas(0);
                     console.log(`${valor}mi é igual a ${milesToKilometers}km`.padEnd(40, " ") + `|`);
