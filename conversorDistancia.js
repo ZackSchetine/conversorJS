@@ -16,6 +16,7 @@ function menuConvDistDisplay() {
     console.log("|1 - Quilômetro(km) para milha(mi)      |");
     console.log("|2 - Milha(mi) para quilômetro(km)      |");
     console.log("|3 - Voltar a tela inicial              |");
+    console.log("|4 - Fechar o programa                  |")
     bordas(1);
 }
 
@@ -47,7 +48,7 @@ function convDistancia() {
                 console.log("|Informe o valor a ser convertido:      |");
                 bordas(1);
                 valor = Number(teclado());
-                if (numeroNegativo(validarNumero(valor))) {
+                if (numer(validarNumero(valor))) {
                     const milesToKilometers = (valor * number).toFixed(2);
                     bordas(0);
                     console.log(`${valor}mi é igual a ${milesToKilometers}km`.padEnd(40, " ") + `|`);
@@ -60,6 +61,12 @@ function convDistancia() {
                 console.log("|        Voltando a tela inicial        |");
                 bordas(1);
                 break;
+
+            case 4:
+                bordas(0);
+                console.log("|          Saindo do programa           |");
+                bordas(1);
+                process.exit();
 
             default:
                 bordas(0);
