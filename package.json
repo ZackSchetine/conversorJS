@@ -6,6 +6,7 @@
   "name": "conversorjs",
   "description": "Este projeto consiste em um Conversor de Unidades simples, desenvolvido em JavaScript. O programa é executado no terminal e oferece um menu interativo para selecionar as opções desejadas.",
   "version": "1.0.0",
+  "type": "module",
   "main": "conversor.js",
   "scripts": {
     "start": "node conversor.js"
