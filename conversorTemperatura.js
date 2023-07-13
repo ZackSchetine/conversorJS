@@ -14,7 +14,9 @@ function menuConvTempDisplay() {
     console.log("|Escolha uma das seguintes opções:      |");
     console.log("|1 - Celsius(C) para fahrenheit(F)      |");
     console.log("|2 - Fahrenheit(F) para celsius(C)      |");
-    console.log("|3 - Voltar a tela inicial              |");
+    console.log("|3 - Celsius(C) para kelvin(K)          |");
+    console.log("|4 - Kelvin(K) para celsius(C)          |");
+    console.log("|5 - Voltar a tela inicial              |");
     bordas(1);
 }
 
@@ -53,18 +55,46 @@ function convTemperaturas() {
 
                 break;
 
-            case 3:
-                bordas(0);
-                console.log("|        Voltando a tela inicial        |");
-                bordas(1);
-                break;
+                case 3:
+                    //C para K
+                    bordas(0);
+                    console.log("|Informe o valor a ser convertido:      |");
+                    bordas(1);
+                    valor = Number(teclado());
+                    if (validarNumero(valor)) {
+                        const celsiusToKelvin = (valor + 273.15).toFixed(2);
+                        bordas(0);
+                        console.log(`|${valor}C é igual a ${celsiusToKelvin}K`.padEnd(40, " ") + `|`);
+                        bordas(1);
+                    }
+                    break;
+    
+                case 4:
+                    //K para C
+                    bordas(0);
+                    console.log("|Informe o valor a ser convertido:      |");
+                    bordas(1);
+                    valor = Number(teclado());
+                    if (validarNumero(valor)) {
+                        const kelvinToCelsius = (valor - 273.15).toFixed(2);
+                        bordas(0);
+                        console.log(`|${valor}K é igual a ${kelvinToCelsius}C`.padEnd(40, " ") + `|`);
+                        bordas(1);
+                    }
+                    break;
+    
+                case 5:
+                    bordas(0);
+                    console.log("|        Voltando a tela inicial        |");
+                    bordas(1);
+                    break;
 
             default:
                 bordas(0);
                 console.log("|            Opção inválida             |");
                 bordas(1);
         }
-    } while (opcaoInterna != 3);
+    } while (opcaoInterna != 5);
 }
 
 module.exports = convTemperaturas;
