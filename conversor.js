@@ -1,9 +1,11 @@
-/*  Utilize Node no terminal para iniciar aplicação. É um requisito ter node e express instalado */
+/*  Utilize Node no terminal para iniciar aplicação.
+ É um requisito ter node instalado
+ */
 let teclado = require('prompt-sync')();
 // módulo ('prompt-sync') para receber entradas e ler pelo terminal
 
 const bordas = require('./bordas');
-const convDistancia = require('./conversorDistancia');
+const conVelocidade = require('./conversorVelocidade');
 const convTemperatura = require('./conversorTemperatura');
 let opcao = 0;
 
@@ -13,7 +15,7 @@ function menuPrincipalDisplay() {
     console.log("|            Menu principal             |");
     bordas(2);
     console.log("|Escolha uma das seguintes opções:      |");
-    console.log("|1 - Conversão de distâncias            |");
+    console.log("|1 - Conversão de velocidade            |");
     console.log("|2 - Conversão de temperaturas          |");
     console.log("|3 - Fechar o programa                  |");
     bordas(1);
@@ -26,7 +28,7 @@ function menuPrincipal() {
         opcao = parseInt(teclado());
         switch (opcao) {
             case 1:
-                convDistancia();
+                conVelocidade();
                 break;
 
             case 2:
