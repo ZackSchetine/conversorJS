@@ -35,7 +35,7 @@ function convTemperaturas() {
                 if (validarNumero(valor)) {
                     const celsiusToFahrenheit = ((valor * 9 / 5) + 32).toFixed(2);
                     bordas(0);
-                    console.log(`|${valor}C é igual a ${celsiusToFahrenheit}F`.padEnd(40, " ") + `|`);
+                    console.log(`|${valor} C é igual a ${celsiusToFahrenheit} F`.padEnd(40, " ") + `|`);
                     bordas(1);
                 };
                 break;
@@ -49,7 +49,7 @@ function convTemperaturas() {
                 if (validarNumero(valor)) {
                     const fahrenheitToCelsius = ((valor - 32) * 5 / 9).toFixed(2);
                     bordas(0);
-                    console.log(`|${valor}F é igual a ${fahrenheitToCelsius}C`.padEnd(40, " ") + `|`);
+                    console.log(`|${valor} F é igual a ${fahrenheitToCelsius} C`.padEnd(40, " ") + `|`);
                     bordas(1);
                 }
 
@@ -64,7 +64,7 @@ function convTemperaturas() {
                     if (validarNumero(valor)) {
                         const celsiusToKelvin = (valor + 273.15).toFixed(2);
                         bordas(0);
-                        console.log(`|${valor}C é igual a ${celsiusToKelvin}K`.padEnd(40, " ") + `|`);
+                        console.log(`|${valor} C é igual a ${celsiusToKelvin} K`.padEnd(40, " ") + `|`);
                         bordas(1);
                     }
                     break;
@@ -78,7 +78,7 @@ function convTemperaturas() {
                     if (validarNumero(valor)) {
                         const kelvinToCelsius = (valor - 273.15).toFixed(2);
                         bordas(0);
-                        console.log(`|${valor}K é igual a ${kelvinToCelsius}C`.padEnd(40, " ") + `|`);
+                        console.log(`|${valor} K é igual a ${kelvinToCelsius} C`.padEnd(40, " ") + `|`);
                         bordas(1);
                     }
                     break;
