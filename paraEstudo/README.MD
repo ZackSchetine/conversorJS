@@ -1,1 +1,0 @@
-Só pra se ilustrar outra forma que foi feito, via node. 
