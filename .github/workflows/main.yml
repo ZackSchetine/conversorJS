@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v2
-      
-      - name: Executar código JavaScript
-        run: npm install express
         
       - name: Executar código JavaScript
         run: npm start
