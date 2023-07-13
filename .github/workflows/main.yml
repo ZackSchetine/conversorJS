@@ -1,0 +1,17 @@
+name: Executar código JavaScript
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Executar código JavaScript
+        run: node conversor.js
