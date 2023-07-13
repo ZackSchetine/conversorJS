@@ -1,7 +1,8 @@
-let teclado = require('prompt-sync')();
+import prompt from 'prompt-sync';
+const teclado = prompt();
 
-const bordas = require('./bordas');
-const validarNumero = require('./validarNumero');
+import bordas from './bordas.js';
+import validarNumero from './validarNumero.js';
 
 let opcaoInterna = 0;
 let valor = 0;
@@ -21,7 +22,7 @@ function menuConvTempDisplay() {
 }
 
 //Menu de conversão de temperaturas
-function convTemperaturas() {
+export default function  convTemperaturas() {
     do {
         menuConvTempDisplay();
         opcaoInterna = Number(teclado());
@@ -32,11 +33,13 @@ function convTemperaturas() {
                 console.log("|Informe o valor a ser convertido:      |");
                 bordas(1);
                 valor = Number(teclado());
+
                 if (validarNumero(valor)) {
                     const celsiusToFahrenheit = ((valor * 9 / 5) + 32).toFixed(2);
                     bordas(0);
                     console.log(`|${valor} C é igual a ${celsiusToFahrenheit} F`.padEnd(40, " ") + `|`);
                     bordas(1);
+
                 };
                 break;
 
@@ -46,6 +49,7 @@ function convTemperaturas() {
                 console.log("|Informe o valor a ser convertido:      |");
                 bordas(1);
                 valor = Number(teclado());
+
                 if (validarNumero(valor)) {
                     const fahrenheitToCelsius = ((valor - 32) * 5 / 9).toFixed(2);
                     bordas(0);
@@ -61,6 +65,7 @@ function convTemperaturas() {
                     console.log("|Informe o valor a ser convertido:      |");
                     bordas(1);
                     valor = Number(teclado());
+
                     if (validarNumero(valor)) {
                         const celsiusToKelvin = (valor + 273.15).toFixed(2);
                         bordas(0);
@@ -75,6 +80,7 @@ function convTemperaturas() {
                     console.log("|Informe o valor a ser convertido:      |");
                     bordas(1);
                     valor = Number(teclado());
+
                     if (validarNumero(valor)) {
                         const kelvinToCelsius = (valor - 273.15).toFixed(2);
                         bordas(0);
@@ -96,5 +102,3 @@ function convTemperaturas() {
         }
     } while (opcaoInterna != 5);
 }
-
-module.exports = convTemperaturas;

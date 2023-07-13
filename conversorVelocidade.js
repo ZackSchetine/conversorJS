@@ -1,10 +1,11 @@
-let teclado = require('prompt-sync')();
+import prompt from 'prompt-sync';
+let teclado = prompt();
 // talvez seja o caso de ser uma constante
 //  Essa função será usada para obter a entrada do usuário no console.
 
-const bordas = require('./bordas');
-const validarNumero = require('./validarNumero');
-const numeroNegativo = require('./numeroNegativo');
+import bordas from './bordas.js';
+import validarNumero from './validarNumero.js';
+import numeroNegativo from './numeroNegativo.js';
 
 let opcaoInterna = 0;
 //  Essa variável será usada para armazenar a opção selecionada pelo usuário no menu de conversão de velocidades.
@@ -25,7 +26,7 @@ function menuConVelDisplay() {
 
 // Função para converter km/h para m/s
 //  Ela é responsável por controlar o fluxo do programa e realizar as conversões de velocidade. 
-function conVelocidade() {
+export default function conVelocidade() {
     const factor = 3.6; // constante atualizada
     do {
         menuConVelDisplay();
@@ -73,7 +74,5 @@ function conVelocidade() {
         }
     } while (opcaoInterna != 3);
 }
-
-module.exports = conVelocidade;
 
 // Sugestão, alterar valor = Number(teclado()); para valor = parseFloat(prompt()) ou parseFloat(teclado()), pois a função prompt() retorna uma string e, para realizar a conversão correta para número de ponto flutuante, usamos parseFloat() em vez de Number(), para tornar o nome da varíavel mais compreensível. 

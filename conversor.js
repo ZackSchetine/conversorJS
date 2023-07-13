@@ -1,12 +1,16 @@
-/*  Utilize Node no terminal para iniciar aplicação.
- É um requisito ter node instalado
+/*  É um requisito ter node instalado
+    Utilize Node no terminal para iniciar aplicação.
+    módulo ('prompt-sync') para receber entradas e ler pelo terminal
  */
-let teclado = require('prompt-sync')();
-// módulo ('prompt-sync') para receber entradas e ler pelo terminal
 
-const bordas = require('./bordas');
-const conVelocidade = require('./conversorVelocidade');
-const convTemperatura = require('./conversorTemperatura');
+import prompt from 'prompt-sync';
+const teclado = prompt();
+
+import bordas from './bordas.js';
+
+import conVelocidade from './conversorVelocidade.js';
+import convTemperatura from './conversorTemperatura.js';
+
 let opcao = 0;
 
 //Display do menu principal
