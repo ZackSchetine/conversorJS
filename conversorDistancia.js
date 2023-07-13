@@ -1,8 +1,9 @@
-let teclado = require('prompt-sync')();
+import prompt from 'prompt-sync';
+let teclado = prompt();
 
-const bordas = require('./bordas');
-const validarNumero = require('./validarNumero');
-const numeroNegativo = require('./numeroNegativo');
+import bordas from './bordas.js';
+import validarNumero from './validarNumero.js';
+import numeroNegativo from './numeroNegativo.js';
 
 let opcaoInterna = 0;
 let valor = 0;
@@ -21,7 +22,7 @@ function menuConvDistDisplay() {
 }
 
 //Menu de conversão de distâncias
-function convDistancia() {
+export default function convDistancia() {
     const number = 1.609344;
     do {
         menuConvDistDisplay();
@@ -75,5 +76,3 @@ function convDistancia() {
         }
     } while (opcaoInterna != 3);
 }
-
-module.exports = convDistancia;

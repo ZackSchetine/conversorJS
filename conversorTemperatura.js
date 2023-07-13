@@ -1,7 +1,8 @@
-let teclado = require('prompt-sync')();
+import prompt from 'prompt-sync';
+const teclado = prompt();
 
-const bordas = require('./bordas');
-const validarNumero = require('./validarNumero');
+import bordas from './bordas.js';
+import validarNumero from './validarNumero.js';
 
 let opcaoInterna = 0;
 let valor = 0;
@@ -20,7 +21,7 @@ function menuConvTempDisplay() {
 }
 
 //Menu de conversão de temperaturas
-function convTemperaturas() {
+export default function convTemperaturas() {
     do {
         menuConvTempDisplay();
         opcaoInterna = Number(teclado());
@@ -73,5 +74,3 @@ function convTemperaturas() {
         }
     } while (opcaoInterna != 3);
 }
-
-module.exports = convTemperaturas;

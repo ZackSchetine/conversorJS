@@ -1,4 +1,4 @@
-function bordas(x) {
+export default function bordas(x) {
     if (x == 0) {
         console.log("\n+---------------------------------------+");
     } else if (x == 1) {
@@ -7,5 +7,3 @@ function bordas(x) {
         console.log("|                                       |");
     } else {}
 }
-
-module.exports = bordas;
