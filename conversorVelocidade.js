@@ -1,7 +1,6 @@
 import prompt from 'prompt-sync';
-let teclado = prompt();
-// talvez seja o caso de ser uma constante
-//  Essa função será usada para obter a entrada do usuário no console.
+const teclado = prompt();
+// Essa função será usada para obter a entrada do usuário no console.
 
 import bordas from './bordas.js';
 import validarNumero from './validarNumero.js';
@@ -21,11 +20,12 @@ function menuConVelDisplay() {
     console.log("|1 - km/h para m/s                      |");
     console.log("|2 - m/s para km/h                      |");
     console.log("|3 - Voltar a tela inicial              |");
+    console.log("|4 - Fechar o programa                  |");
     bordas(1);
 }
 
 // Função para converter km/h para m/s
-//  Ela é responsável por controlar o fluxo do programa e realizar as conversões de velocidade. 
+// Ela é responsável por controlar o fluxo do programa e realizar as conversões de velocidade. 
 export default function conVelocidade() {
     const factor = 3.6; // constante atualizada
     do {
@@ -67,6 +67,12 @@ export default function conVelocidade() {
                 bordas(1);
                 break;
 
+            case 4:
+                bordas(0);
+                console.log("|          Saindo do programa           |");               
+                bordas(1);
+                process.exit();
+                
             default:
                 bordas(0);
                 console.log("|            Opção inválida             |");

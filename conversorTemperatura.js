@@ -18,11 +18,12 @@ function menuConvTempDisplay() {
     console.log("|3 - Celsius(C) para kelvin(K)          |");
     console.log("|4 - Kelvin(K) para celsius(C)          |");
     console.log("|5 - Voltar a tela inicial              |");
+    console.log("|6 - Fechar o programa                  |");
     bordas(1);
 }
 
 //Menu de conversão de temperaturas
-export default function  convTemperaturas() {
+export default function convTemperaturas() {
     do {
         menuConvTempDisplay();
         opcaoInterna = Number(teclado());
@@ -59,41 +60,47 @@ export default function  convTemperaturas() {
 
                 break;
 
-                case 3:
-                    //C para K
-                    bordas(0);
-                    console.log("|Informe o valor a ser convertido:      |");
-                    bordas(1);
-                    valor = Number(teclado());
+            case 3:
+                //C para K
+                bordas(0);
+                console.log("|Informe o valor a ser convertido:      |");
+                bordas(1);
+                valor = Number(teclado());
 
-                    if (validarNumero(valor)) {
-                        const celsiusToKelvin = (valor + 273.15).toFixed(2);
-                        bordas(0);
-                        console.log(`|${valor} C é igual a ${celsiusToKelvin} K`.padEnd(40, " ") + `|`);
-                        bordas(1);
-                    }
-                    break;
-    
-                case 4:
-                    //K para C
+                if (validarNumero(valor)) {
+                    const celsiusToKelvin = (valor + 273.15).toFixed(2);
                     bordas(0);
-                    console.log("|Informe o valor a ser convertido:      |");
+                    console.log(`|${valor} C é igual a ${celsiusToKelvin} K`.padEnd(40, " ") + `|`);
                     bordas(1);
-                    valor = Number(teclado());
+                }
+                break;
 
-                    if (validarNumero(valor)) {
-                        const kelvinToCelsius = (valor - 273.15).toFixed(2);
-                        bordas(0);
-                        console.log(`|${valor} K é igual a ${kelvinToCelsius} C`.padEnd(40, " ") + `|`);
-                        bordas(1);
-                    }
-                    break;
-    
-                case 5:
+            case 4:
+                //K para C
+                bordas(0);
+                console.log("|Informe o valor a ser convertido:      |");
+                bordas(1);
+                valor = Number(teclado());
+
+                if (validarNumero(valor)) {
+                    const kelvinToCelsius = (valor - 273.15).toFixed(2);
                     bordas(0);
-                    console.log("|        Voltando a tela inicial        |");
+                    console.log(`|${valor} K é igual a ${kelvinToCelsius} C`.padEnd(40, " ") + `|`);
                     bordas(1);
-                    break;
+                }
+                break;
+
+            case 5:
+                bordas(0);
+                console.log("|        Voltando a tela inicial        |");
+                bordas(1);
+                break;
+
+            case 6:
+                bordas(0);
+                console.log("|          Saindo do programa           |");
+                bordas(1);
+                process.exit();
 
             default:
                 bordas(0);
