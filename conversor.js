@@ -7,9 +7,9 @@ import prompt from 'prompt-sync';
 const teclado = prompt();
 
 import bordas from './bordas.js';
-
 import conVelocidade from './conversorVelocidade.js';
 import convTemperatura from './conversorTemperatura.js';
+import convPeso from './conversorPeso.js';
 
 let opcao = 0;
 
@@ -21,7 +21,8 @@ function menuPrincipalDisplay() {
     console.log("|Escolha uma das seguintes opções:      |");
     console.log("|1 - Conversão de velocidade            |");
     console.log("|2 - Conversão de temperaturas          |");
-    console.log("|3 - Fechar o programa                  |");
+    console.log("|3 - Conversão de pesos                 |");
+    console.log("|4 - Fechar o programa                  |");
     bordas(1);
 }
 
@@ -40,6 +41,10 @@ function menuPrincipal() {
                 break;
 
             case 3:
+                convPeso();
+                break;
+
+            case 4:
                 bordas(0);
                 console.log("|          Saindo do programa           |");
                 bordas(1);
@@ -50,7 +55,7 @@ function menuPrincipal() {
                 console.log("|            Opção inválida             |");
                 bordas(1);
         }
-    } while (opcao != 3);
+    } while (opcao != 4);
 }
 
 menuPrincipal();

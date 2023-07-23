@@ -12,7 +12,7 @@ let valor = 0;
 // Essa variável será usada para armazenar o valor a ser convertido entre unidades de velocidade.
 
 //Display do menu de velocidades 
-function menuConVelDisplay() {
+function menuConvVelDisplay() {
     bordas(0);
     console.log("|     Menu conversão de velocidades     |");
     bordas(2);
@@ -26,10 +26,10 @@ function menuConVelDisplay() {
 
 // Função para converter km/h para m/s
 // Ela é responsável por controlar o fluxo do programa e realizar as conversões de velocidade. 
-export default function conVelocidade() {
+export default function convVelocidade() {
     const factor = 3.6; // constante atualizada
     do {
-        menuConVelDisplay();
+        menuConvVelDisplay();
         opcaoInterna = Number(teclado());
         switch (opcaoInterna) {
             case 1:
